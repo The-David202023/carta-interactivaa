@@ -124,10 +124,12 @@
     </div>
 
     <div id="extra" class="hidden">
-      <p>Te extraño más de lo que las palabras alcanzan a explicar 😢. Hay días en los que daría todo por un abrazo tuyo, por escucharte decir mi nombre como solías hacerlo... porque aunque ahora somos amigos, mi corazón aún guarda cada latido que te pertenece 💓.</p>
-      <p>No puedo dejar de extrañar tu cuerpo, la forma en que cada curva tuya encajaba perfectamente con la mía. Siento la necesidad de recorrer tu piel con mis manos, de perderme en cada suspiro que provocabas. Me consume el recuerdo de tus caricias, de ese calor que solo tú sabes despertar. No hay nada que desee más que volver a sentir ese fuego entre nosotros, intenso y sin límites.</p>
-      <p>Con mucho cariño,<br>David 💙</p>
-    </div>
+        <p>Te extraño más de lo que las palabras alcanzan a explicar 😢. Hay días en los que daría todo por un abrazo tuyo, por escucharte decir mi nombre como solías hacerlo... porque aunque ahora somos amigos, mi corazón aún guarda cada latido que te pertenece 💓.</p>
+        <p>No puedo dejar de extrañar tu cuerpo, la forma en que cada curva tuya encajaba perfectamente con la mía. Siento la necesidad de recorrer tu piel con mis manos, de perderme en cada suspiro que provocabas. Me consume el recuerdo de tus caricias, de ese calor que solo tú sabes despertar. No hay nada que desee más que volver a sentir ese fuego entre nosotros, intenso y sin límites.</p>
+        <p>Con mucho cariño,<br>David 💙</p>
+        
+        <button onclick="reiniciarCarta()">🙏 Gracias por leer esto. Puedes cerrar esto ahora</button>
+      </div>      
   </div>
 
   <script>
@@ -143,6 +145,13 @@
     function mostrarExtra() {
       document.getElementById("extra").style.display = "block";
     }
-  </script>
+    function reiniciarCarta() {
+      document.getElementById("primero").style.display = "none";
+      document.getElementById("segundo").style.display = "none";
+      document.getElementById("tercero").style.display = "none";
+      document.getElementById("extra").style.display = "none";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>  
 </body>
 </html>
