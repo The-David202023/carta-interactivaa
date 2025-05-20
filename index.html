@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solo para Ti</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #000;
+      color: white;
+      min-height: 100vh;
+      overflow: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://cdn.pixabay.com/photo/2017/08/30/07/52/stars-2695569_1280.jpg') no-repeat center center;
+      background-size: cover;
+      z-index: -1;
+      opacity: 0.5;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      transition: transform 0.4s ease;
+      z-index: 1;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #4e5bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2a34c0;
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🌌 Querida Mabel,</h1>
+    <p>Gracias por tomarte el tiempo de leer esto. No es una confesión, ni una súplica... solo una parte de mí que necesitaba hablarte con el corazón 💬❤️.</p>
+
+    <button onclick="mostrarPrimero()">💭 Leer primera parte</button>
+    <div id="primero" class="hidden">
+      <p>Desde que nuestras vidas tomaron caminos distintos, he aprendido a verte desde otro lugar... pero eso no significa que haya dejado de sentir 💔. A veces me descubro sonriendo por recuerdos que ya no están, por momentos simples que hoy valen oro ✨.</p>
+      <button onclick="mostrarSegundo()">🕰️ Sigue leyendo</button>
+    </div>
+
+    <div id="segundo" class="hidden">
+      <p>Extraño más de lo que digo: tu forma de mirar, tu risa inesperada, incluso tus silencios 🥺. No es fácil vernos como solo amigos, cuando fuiste mucho más que eso. Pero respeto lo que somos ahora, aunque el corazón a veces no entienda 🤍.</p>
+      <button onclick="mostrarTercero()">💌 Unas últimas palabras</button>
+    </div>
+
+    <div id="tercero" class="hidden">
+      <p>Ojalá la vida te esté abrazando bonito 🤗. Y si algún día el viento te lleva de vuelta, aquí estaré, sin reproches, solo con cariño y los brazos abiertos. Gracias por haber sido tú en mi historia, porque nadie más lo hubiera hecho tan mágico ✨.</p>
+      <button onclick="mostrarExtra()">😭 Lo que más siento...</button>
+    </div>
+
+    <div id="extra" class="hidden">
+      <p>Te extraño más de lo que las palabras alcanzan a explicar 😢. Hay días en los que daría todo por un abrazo tuyo, por escucharte decir mi nombre como solías hacerlo... porque aunque ahora somos amigos, mi corazón aún guarda cada latido que te pertenece 💓.</p>
+      <p>Con mucho cariño,<br>David 💙</p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarPrimero() {
+      document.getElementById("primero").style.display = "block";
+    }
+    function mostrarSegundo() {
+      document.getElementById("segundo").style.display = "block";
+    }
+    function mostrarTercero() {
+      document.getElementById("tercero").style.display = "block";
+    }
+    function mostrarExtra() {
+      document.getElementById("extra").style.display = "block";
+    }
+  </script>
+</body>
+</html>
